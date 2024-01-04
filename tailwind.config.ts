@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 const { fontFamily } = require("tailwindcss/defaultTheme");
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -16,6 +17,8 @@ const config: Config = {
           dark: "#F26419",
           light: "#E98A15",
         },
+        snow: "#FCF7F8",
+        night: "#12130F",
       },
       fontFamily: {
         nunito: ["var(--font-nunito)", ...fontFamily.sans],
