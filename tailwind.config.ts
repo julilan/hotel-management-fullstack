@@ -21,7 +21,7 @@ const config: Config = {
         night: "#12130F",
       },
       fontFamily: {
-        nunito: ["var(--font-nunito)", ...fontFamily.sans],
+        nunito: ["var(--font-montserrat)", ...fontFamily.sans],
       },
     },
   },

@@ -2,14 +2,14 @@ import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({
+const montserrat = Montserrat({
   subsets: ["latin"],
   weight: ["400", "500", "700", "900"],
   style: ["normal", "italic"],
-  variable: "--font-nunito",
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={nunito.className}>
+      <body className={montserrat.className}>
         <ThemeProvider>
           <main className="font-normal">
             <Header />
