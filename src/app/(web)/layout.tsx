@@ -4,6 +4,7 @@ import ThemeProvider from "@/components/ThemeProvider/ThemeProvider";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { NextAuthProvider } from "@/components/AuthProvider/AuthProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -23,15 +24,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={montserrat.className}>
-        <ThemeProvider>
-          <main className="font-normal">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-        </ThemeProvider>
+        <NextAuthProvider>
+          <ThemeProvider>
+            <main className='font-normal'>
+              <Header />
+              {children}
+              <Footer />
+            </main>
+          </ThemeProvider>
+        </NextAuthProvider>
       </body>
     </html>
   );
